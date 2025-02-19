@@ -1,12 +1,11 @@
 package com.mye.mall.mapper;
 
-import com.mye.mall.model.CmsPrefrenceArea;
-import com.mye.mall.model.CmsPrefrenceAreaExample;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 
 import com.mye.mall.model.CmsPrefrenceArea;
 import com.mye.mall.model.CmsPrefrenceAreaExample;
-import org.apache.ibatis.annotations.Param;
 
 public interface CmsPrefrenceAreaMapper {
     long countByExample(CmsPrefrenceAreaExample example);
@@ -25,9 +24,11 @@ public interface CmsPrefrenceAreaMapper {
 
     CmsPrefrenceArea selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param("record") CmsPrefrenceArea record, @Param("example") CmsPrefrenceAreaExample example);
+    int updateByExampleSelective(@Param("record") CmsPrefrenceArea record,
+            @Param("example") CmsPrefrenceAreaExample example);
 
-    int updateByExampleWithBLOBs(@Param("record") CmsPrefrenceArea record, @Param("example") CmsPrefrenceAreaExample example);
+    int updateByExampleWithBLOBs(@Param("record") CmsPrefrenceArea record,
+            @Param("example") CmsPrefrenceAreaExample example);
 
     int updateByExample(@Param("record") CmsPrefrenceArea record, @Param("example") CmsPrefrenceAreaExample example);
 
@@ -36,6 +37,4 @@ public interface CmsPrefrenceAreaMapper {
     int updateByPrimaryKeyWithBLOBs(CmsPrefrenceArea record);
 
     int updateByPrimaryKey(CmsPrefrenceArea record);
-
-    List<com.mye.mall.model.CmsPrefrenceArea> selectByExample(com.mye.mall.model.CmsPrefrenceAreaExample cmsPrefrenceAreaExample);
 }
